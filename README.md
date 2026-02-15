@@ -39,7 +39,7 @@ After upload:
 After boot device creates WiFi network:
 
 ```
-SSID: ESP32-OTA
+SSID: Sarjul
 Password: 12345678
 ```
 
