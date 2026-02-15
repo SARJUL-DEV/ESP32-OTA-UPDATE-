@@ -1,8 +1,18 @@
-# 🚀 ESP32 OTA Web Updater – Sarjul Device UI
+# 🚀 Universal OTA Web Updater (ESP32 + ESP8266)
 
-A professional wireless firmware updater for ESP32 with a modern web interface.
+A professional wireless firmware updater with a modern web interface compatible with both ESP32 and ESP8266 boards.
 
-This system lets you upload firmware files directly from browser and flash them instantly without USB connection.
+This project allows you to upload firmware files directly from your browser and flash them instantly without USB.
+
+---
+
+## ✅ Supported Boards
+
+✔ ESP32  
+✔ ESP8266  
+
+Both versions use the **same UI design**, same workflow, same flashing process.  
+Only firmware files differ depending on board.
 
 ---
 
@@ -13,12 +23,16 @@ This system lets you upload firmware files directly from browser and flash them 
 ---
 
 ## 📌 Overview
-This project creates a WiFi access point and hosts a built-in web dashboard where users can upload firmware files safely.
 
-After upload:
+The device creates its own WiFi access point and hosts a built-in update dashboard.
+
+After uploading firmware:
+
 - firmware writes to flash
-- device verifies
+- verification runs
 - device reboots automatically
+
+No cables required after first upload.
 
 ---
 
@@ -26,24 +40,25 @@ After upload:
 
 - Wireless OTA flashing  
 - Premium modern UI  
-- Real-time progress display  
-- Storage info viewer  
-- Max firmware size indicator  
+- Real-time progress indicator  
+- Storage usage display  
+- Maximum firmware size indicator  
 - Safe flashing system  
-- Auto reboot  
+- Auto restart after update  
+- Lightweight code  
 
 ---
 
 ## 📡 Device Access
 
-After boot device creates WiFi network:
+After boot device creates WiFi:
 
 ```
-SSID: Sarjul
+SSID: sarjul
 Password: 12345678
 ```
 
-Open browser:
+Open browser and visit:
 
 ```
 192.168.4.1
@@ -54,9 +69,10 @@ Open browser:
 ## 📂 Project Structure
 
 ```
-ESP32-OTA/
+Universal-OTA/
 │
-├── OTA.ino
+├── ESP32-Version.ino
+├── ESP8266-Version.ino
 ├── README.md
 └── assets/
      └── ui.png
@@ -66,27 +82,31 @@ ESP32-OTA/
 
 ## ⚙️ Installation
 
-1. Open Arduino IDE  
-2. Install ESP32 board package  
-3. Select board → ESP32 Dev Module  
-4. Upload code once via USB  
+### First Upload (Required once)
 
-After that all updates are wireless.
+1. Open Arduino IDE  
+2. Install board package  
+3. Select correct board  
+4. Upload code via USB  
+
+After that all updates can be done wirelessly.
 
 ---
 
-## 🔄 Firmware Update Steps
+## 🔄 OTA Update Steps
 
 1. Connect to device WiFi  
 2. Open browser  
 3. Enter IP address  
-4. Select firmware file  
+4. Choose firmware file  
 5. Click **Upload & Flash**  
 6. Wait for reboot  
 
+Done.
+
 ---
 
-## 🧠 System Working Logic
+## 🧠 Working Logic
 
 ```
 Boot → AP Mode → Web Server → Upload → Flash → Restart
@@ -94,31 +114,31 @@ Boot → AP Mode → Web Server → Upload → Flash → Restart
 
 ---
 
-## 🛡 Safety Notes
+## 🛡 Safety Guidelines
 
-- Never power off during update  
-- Only upload correct firmware  
-- Stable connection required  
+- Do not power off during update  
+- Only upload correct firmware file  
+- Ensure stable connection  
 
 ---
 
-## 🎯 Customization
+## 🔧 Customization
 
-You can modify easily:
-
-| Item | Where |
-|-----|------|
-WiFi Name | setup() |
+| Setting | Location |
+|--------|----------|
+WiFi name | setup() |
 Password | setup() |
-UI Text | HTML code |
-LED Pin | define section |
+UI text | HTML section |
+LED pin | define section |
 
 ---
 
 ## 📜 License
+
 Free for personal and commercial use.
 
 ---
 
 ## 👨‍💻 Developer
+
 Sarjul
