@@ -8,7 +8,7 @@ This system lets you upload firmware files directly from browser and flash them 
 
 ## 🌐 Web Interface Preview
 
-![UI Preview](assets/ui.png)
+![UI Preview](kapkap_20260215194445083_sys.jpg)
 
 ---
 
