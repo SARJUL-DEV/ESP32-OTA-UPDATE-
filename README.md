@@ -55,7 +55,7 @@ After boot device creates WiFi:
 
 ```
 SSID: sarjul
-Password: 12345678
+Password: sarjul123
 ```
 
 Open browser and visit:
